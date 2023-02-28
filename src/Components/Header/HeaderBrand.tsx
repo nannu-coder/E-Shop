@@ -69,20 +69,9 @@ function classNames(...classes: string[]) {
 
 const HeaderBrand = () => {
   const [searchTerm, setSearchTerm] = useState("");
-  const [category, setCategory] = useState("All Categories");
-  const categories = [
-    "All Categories",
-    "Category 1",
-    "Category 2",
-    "Category 3",
-  ];
 
   const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(event.target.value);
-  };
-
-  const handleCategoryChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setCategory(event.target.value);
   };
 
   return (
