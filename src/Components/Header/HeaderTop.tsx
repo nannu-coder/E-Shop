@@ -63,7 +63,7 @@ const HeaderTop = () => {
 
   return (
     <div>
-      <div className="container mx-auto">
+      <div className="container-x mx-auto">
         <div className="header-box flex justify-between py-0 items-center">
           <div className="header-left">
             <button className="btn mr-3">Account</button>

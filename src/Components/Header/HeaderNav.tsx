@@ -356,7 +356,7 @@ const HeaderNav: React.FC = () => {
         </Transition.Root>
 
         <header className="relative bg-yellow-300">
-          <nav aria-label="Top" className="md:container mx-auto">
+          <nav aria-label="Top" className="container-x mx-auto">
             <div className=" border-gray-200">
               <div className="flex h-16 items-center">
                 {/* Mobile Button */}
