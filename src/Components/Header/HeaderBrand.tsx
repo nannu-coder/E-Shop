@@ -78,7 +78,7 @@ const HeaderBrand = () => {
     <Disclosure as="nav" className="bg-slate-100">
       {({ open }) => (
         <>
-          <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+          <div className="container mx-auto">
             <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
@@ -105,7 +105,7 @@ const HeaderBrand = () => {
                     alt="Your Company"
                   />
                 </div>
-                <div className="hidden sm:ml-6 sm:block">
+                <div className="hidden sm:ml-6 sm:block md:mx-auto">
                   <div className="flex space-x-4">
                     {/* {navigation.map((item) => (
                       <a
@@ -150,24 +150,12 @@ const HeaderBrand = () => {
                         </div>
                         <input
                           type="text"
-                          className="block w-full py-2 pl-10 pr-3 leading-5 text-gray-900 placeholder-gray-500 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:placeholder-gray-400 sm:text-sm"
+                          className="block w-96 py-2 pl-10 pr-3 leading-5 text-gray-900 placeholder-gray-500 bg-white border border-gray-300 rounded-tl-md rounded-bl-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:placeholder-gray-400 sm:text-sm"
                           placeholder="Search"
                           value={searchTerm}
                           onChange={handleSearch}
                         />
                         <div className="absolute inset-y-0 right-0 flex items-center pr-3">
-                          {/* <select
-                            className="block w-full py-2 pl-3 pr-10 leading-5 text-gray-900 bg-white  rounded-md shadow-sm focus:outline-none focus:ring-blue-500 border-none "
-                            value={category}
-                            // onChange={handleCategoryChange}
-                          >
-                            {categories.map((category) => (
-                              <option key={category} value={category}>
-                                {category}
-                              </option>
-                            ))}
-                          </select> */}
-
                           <Popover className="relative">
                             <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
                               Product
@@ -232,25 +220,11 @@ const HeaderBrand = () => {
                               </Popover.Panel>
                             </Transition>
                           </Popover>
-
-                          {/* <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-400">
-                            <svg
-                              className="w-4 h-4"
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth="2"
-                                d="M9 5l7 7-7 7"
-                              />
-                            </svg>
-                          </div> */}
                         </div>
                       </div>
+                      <button className="px-7  h-9 inline-block bg-yellow-300 text-slate-100">
+                        Search
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -258,7 +232,7 @@ const HeaderBrand = () => {
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                 <button
                   type="button"
-                  className="rounded-full p-1 ml-3 text-gray-400 hover:text-gray-600 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                  className="rounded-full p-1 text-gray-400 hover:text-gray-600 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                 >
                   <span className="sr-only">View notifications</span>
                   <ArrowPathIcon className="h-6 w-6" aria-hidden="true" />
