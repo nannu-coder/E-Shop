@@ -64,13 +64,14 @@ const HeaderTop = () => {
   return (
     <div>
       <div className="container mx-auto">
-        <div className="header-box flex justify-between py-2 items-center">
+        <div className="header-box flex justify-between py-0 items-center">
           <div className="header-left">
             <button className="btn mr-3">Account</button>
             <button className="btn mr-3">Track Order</button>
             <button className="btn mr-3">Support</button>
           </div>
           <div className="header-right flex">
+            {/*======================Country=======================*/}
             <div className="country">
               <Listbox value={country} onChange={setcountry}>
                 {({ open }) => (
@@ -81,7 +82,7 @@ const HeaderTop = () => {
                           <img
                             src={country.avatar}
                             alt=""
-                            className="h-6 w-6 flex-shrink-0 rounded-full object-cover"
+                            className="h-5 w-5 flex-shrink-0 rounded-full object-cover"
                           />
                           <span className="ml-3 block truncate">
                             {country.name}

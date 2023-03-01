@@ -1,13 +1,59 @@
 import { Fragment, useState } from "react";
 import { Dialog, Popover, Tab, Transition } from "@headlessui/react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import {
+  Bars3Icon,
+  XMarkIcon,
+  Bars3BottomLeftIcon,
+} from "@heroicons/react/24/outline";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
+import { Link } from "react-router-dom";
+
+import {
+  ArrowPathIcon,
+  ChartPieIcon,
+  CursorArrowRaysIcon,
+  FingerPrintIcon,
+  SquaresPlusIcon,
+} from "@heroicons/react/24/outline";
+
+const solutions = [
+  {
+    name: "Analytics",
+    description: "Get a better understanding of your traffic",
+    href: "#",
+    icon: ChartPieIcon,
+  },
+  {
+    name: "Engagement",
+    description: "Speak directly to your customers",
+    href: "#",
+    icon: CursorArrowRaysIcon,
+  },
+  {
+    name: "Security",
+    description: "Your customers' data will be safe and secure",
+    href: "#",
+    icon: FingerPrintIcon,
+  },
+  {
+    name: "Integrations",
+    description: "Connect with third-party tools",
+    href: "#",
+    icon: SquaresPlusIcon,
+  },
+  {
+    name: "Automations",
+    description: "Build strategic funnels that will convert",
+    href: "#",
+    icon: ArrowPathIcon,
+  },
+];
 
 const navigation = {
   categories: [
     {
       id: "women",
-      name: "Women",
+      name: "Latest",
       featured: [
         {
           name: "New Arrivals",
@@ -128,8 +174,10 @@ const navigation = {
     },
   ],
   pages: [
-    { name: "Company", href: "#" },
-    { name: "Stores", href: "#" },
+    { name: "All Product", href: "#" },
+    { name: "About", href: "#" },
+    { name: "Blog", href: "#" },
+    { name: "Contact", href: "#" },
   ],
 };
 
@@ -139,6 +187,7 @@ function classNames(...classes: string[]) {
 
 const HeaderNav: React.FC = () => {
   const [open, setOpen] = useState(false);
+
   return (
     <div>
       <div className="bg-white">
@@ -177,7 +226,6 @@ const HeaderNav: React.FC = () => {
                       type="button"
                       className="-m-2 inline-flex items-center justify-center rounded-md p-2 text-gray-400"
                       onClick={() => setOpen(false)}
-                      // onMouseOver={() => setOpen(false)}
                     >
                       <span className="sr-only">Close menu</span>
                       <XMarkIcon className="h-6 w-6" aria-hidden="true" />
@@ -249,7 +297,6 @@ const HeaderNav: React.FC = () => {
                                 {section.name}
                               </p>
                               <ul
-                                role="list"
                                 aria-labelledby={`${category.id}-${section.id}-heading-mobile`}
                                 className="mt-6 flex flex-col space-y-6"
                               >
@@ -286,35 +333,21 @@ const HeaderNav: React.FC = () => {
 
                   <div className="space-y-6 border-t border-gray-200 py-6 px-4">
                     <div className="flow-root">
-                      <a
-                        href="#"
+                      <Link
+                        to="/signin"
                         className="-m-2 block p-2 font-medium text-gray-900"
                       >
                         Sign in
-                      </a>
+                      </Link>
                     </div>
                     <div className="flow-root">
-                      <a
-                        href="#"
+                      <Link
+                        to="signup"
                         className="-m-2 block p-2 font-medium text-gray-900"
                       >
                         Create account
-                      </a>
+                      </Link>
                     </div>
-                  </div>
-
-                  <div className="border-t border-gray-200 py-6 px-4">
-                    <a href="#" className="-m-2 flex items-center p-2">
-                      <img
-                        src="https://tailwindui.com/img/flags/flag-canada.svg"
-                        alt=""
-                        className="block h-auto w-5 flex-shrink-0"
-                      />
-                      <span className="ml-3 block text-base font-medium text-gray-900">
-                        CAD
-                      </span>
-                      <span className="sr-only">, change currency</span>
-                    </a>
                   </div>
                 </Dialog.Panel>
               </Transition.Child>
@@ -336,6 +369,59 @@ const HeaderNav: React.FC = () => {
                   <Bars3Icon className="h-6 w-6" aria-hidden="true" />
                 </button>
 
+                {/* ============================== All Categories========================== */}
+
+                <Popover className="relative">
+                  <Popover.Button className="inline-flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 bg-slate-100 px-14 py-4 rounded-tl-md rounded-tr-md focus-visible:outline-none">
+                    <span>
+                      <Bars3BottomLeftIcon className="h-6 w-6" />
+                    </span>
+                    <span>All Categories</span>
+                  </Popover.Button>
+
+                  <Transition
+                    as={Fragment}
+                    enter="transition ease-out duration-200"
+                    enterFrom="opacity-0 translate-y-1"
+                    enterTo="opacity-100 translate-y-0"
+                    leave="transition ease-in duration-150"
+                    leaveFrom="opacity-100 translate-y-0"
+                    leaveTo="opacity-0 translate-y-1"
+                  >
+                    <Popover.Panel className="absolute left-3/4 z-10 mt-2 flex w-screen max-w-max -translate-x-1/2 px-4">
+                      <div className="w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-white text-sm leading-6 shadow-lg ring-1 ring-gray-900/5">
+                        <div className="p-4">
+                          {solutions.map((item) => (
+                            <div
+                              key={item.name}
+                              className="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-50"
+                            >
+                              <div className="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                                <item.icon
+                                  className="h-6 w-6 text-gray-600 group-hover:text-indigo-600"
+                                  aria-hidden="true"
+                                />
+                              </div>
+                              <div>
+                                <a
+                                  href={item.href}
+                                  className="font-semibold text-gray-900"
+                                >
+                                  {item.name}
+                                  <span className="absolute inset-0" />
+                                </a>
+                                <p className="mt-1 text-gray-600">
+                                  {item.description}
+                                </p>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </Popover.Panel>
+                  </Transition>
+                </Popover>
+
                 {/* Flyout menus */}
                 <Popover.Group className="hidden lg:ml-8 lg:block lg:self-stretch">
                   <div className="flex h-full space-x-8">
@@ -345,13 +431,19 @@ const HeaderNav: React.FC = () => {
                           <>
                             <div className="relative flex">
                               <Popover.Button
-                                onMouseOver={() => setOpen(true)}
-                                onMouseOut={() => setOpen(false)}
+                                onMouseEnter={({
+                                  target,
+                                }: React.MouseEvent<HTMLButtonElement>) =>
+                                  open
+                                    ? ""
+                                    : (target as HTMLInputElement).click()
+                                }
+                                onMouseLeave={() => open && ""}
                                 className={classNames(
                                   open
                                     ? "border-indigo-600 text-indigo-600"
                                     : "border-transparent text-gray-700 hover:text-gray-800",
-                                  "relative z-10 -mb-px flex items-center border-b-2 pt-px text-sm font-medium transition-colors duration-200 ease-out"
+                                  "relative z-10 -mb-px flex items-center border-b-2 pt-px text-sm font-medium transition-colors duration-200 ease-out focus-visible:outline-none"
                                 )}
                               >
                                 {category.name}
@@ -374,7 +466,6 @@ const HeaderNav: React.FC = () => {
                               leaveTo="opacity-0"
                             >
                               <Popover.Panel className="absolute inset-x-0 top-full text-sm text-gray-500">
-                                {/* Presentational element used to render the bottom shadow, if we put the shadow on the actual panel it pokes out the top, so we use this shorter element to hide the top of the shadow */}
                                 <div
                                   className="absolute inset-0 top-1/2 bg-white shadow"
                                   aria-hidden="true"
@@ -467,6 +558,12 @@ const HeaderNav: React.FC = () => {
                     ))}
                   </div>
                 </Popover.Group>
+
+                <div className="seller-btn ml-auto">
+                  <button className="px-7 py-2 bg-black text-slate-100 font-medium">
+                    Become a Seller
+                  </button>
+                </div>
               </div>
             </div>
           </nav>

@@ -13,11 +13,7 @@ import {
   FingerPrintIcon,
   SquaresPlusIcon,
 } from "@heroicons/react/24/outline";
-import {
-  ChevronDownIcon,
-  PlayCircleIcon,
-  PhoneIcon,
-} from "@heroicons/react/20/solid";
+import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { Link } from "react-router-dom";
 
 const navigation = [
@@ -58,11 +54,6 @@ const products = [
   },
 ];
 
-const callsToAction = [
-  { name: "Watch demo", href: "#", icon: PlayCircleIcon },
-  { name: "Contact sales", href: "#", icon: PhoneIcon },
-];
-
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
@@ -75,7 +66,7 @@ const HeaderBrand = () => {
   };
 
   return (
-    <Disclosure as="nav" className="bg-slate-100">
+    <Disclosure as="nav">
       {({ open }) => (
         <>
           <div className="container mx-auto">
@@ -94,7 +85,7 @@ const HeaderBrand = () => {
 
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
-                  <img
+                  {/* <img
                     className="block h-8 w-auto lg:hidden"
                     src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
                     alt="Your Company"
@@ -103,26 +94,13 @@ const HeaderBrand = () => {
                     className="hidden h-8 w-auto lg:block"
                     src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
                     alt="Your Company"
-                  />
+                  /> */}
+                  <h3 className="font-bold text-gray-500 text-3xl">
+                    LO<span className="text-yellow-300">GO</span>
+                  </h3>
                 </div>
                 <div className="hidden sm:ml-6 sm:block md:mx-auto">
                   <div className="flex space-x-4">
-                    {/* {navigation.map((item) => (
-                      <a
-                        key={item.name}
-                        href={item.href}
-                        className={classNames(
-                          item.current
-                            ? "bg-gray-900 text-white"
-                            : "text-black-300 hover:bg-gray-700 hover:text-white",
-                          "px-3 py-2 rounded-md text-sm font-medium"
-                        )}
-                        aria-current={item.current ? "page" : undefined}
-                      >
-                        {item.name}
-                      </a>
-                    ))} */}
-
                     {/* Search Bar */}
                     <div className="flex items-center justify-center">
                       <div className="relative w-full max-w-md">
@@ -157,8 +135,8 @@ const HeaderBrand = () => {
                         />
                         <div className="absolute inset-y-0 right-0 flex items-center pr-3">
                           <Popover className="relative">
-                            <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
-                              Product
+                            <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 focus-visible:outline-none">
+                              Categories
                               <ChevronDownIcon
                                 className="h-5 w-5 flex-none text-gray-400"
                                 aria-hidden="true"
@@ -202,27 +180,12 @@ const HeaderBrand = () => {
                                     </div>
                                   ))}
                                 </div>
-                                <div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
-                                  {callsToAction.map((item) => (
-                                    <a
-                                      key={item.name}
-                                      href={item.href}
-                                      className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100"
-                                    >
-                                      <item.icon
-                                        className="h-5 w-5 flex-none text-gray-400"
-                                        aria-hidden="true"
-                                      />
-                                      {item.name}
-                                    </a>
-                                  ))}
-                                </div>
                               </Popover.Panel>
                             </Transition>
                           </Popover>
                         </div>
                       </div>
-                      <button className="px-7  h-9 inline-block bg-yellow-300 text-slate-100">
+                      <button className="px-7  h-9 inline-block bg-yellow-300 text-slate-100 font-medium rounded-tr-md rounded-br-md">
                         Search
                       </button>
                     </div>
@@ -259,11 +222,6 @@ const HeaderBrand = () => {
                   <div>
                     <Menu.Button className="flex rounded-full text-gray-400 p-1 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                       <span className="sr-only">Open user menu</span>
-                      {/* <img
-                        className="h-8 w-8 rounded-full"
-                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                        alt=""
-                      /> */}
                       <UserIcon className="h-6 w-6" aria-hidden="true" />
                     </Menu.Button>
                   </div>
