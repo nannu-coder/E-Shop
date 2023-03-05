@@ -1,13 +1,19 @@
 import React from "react";
-import { StarIcon } from "@heroicons/react/24/outline";
+import {
+  StarIcon,
+  ShoppingBagIcon,
+  ArrowPathIcon,
+  HeartIcon,
+  ArrowsPointingOutIcon,
+} from "@heroicons/react/24/outline";
 import { StarIcon as FillStar } from "@heroicons/react/24/solid";
 import card1 from "../Images/Card/product-img-1.jpg";
 
 const Card = () => {
   return (
     <>
-      <div className="grid grid-cols-4 pb-5">
-        <div className="card-box bg-white flex flex-col justify-center w-full items-center px-6 relative">
+      <div className="pb-5">
+        <div className="card-box group bg-white flex flex-col justify-center w-full items-center px-6 relative overflow-hidden">
           <div className="card-img pb-14 pt-8">
             <img src={card1} alt="card1" />
           </div>
@@ -33,7 +39,25 @@ const Card = () => {
             </div>
           </div>
 
-          <div className="overlay-content"></div>
+          <div className="overlay">
+            <div className="overlay-content w-full  absolute invisible  -bottom-10 transition-all ease-in-out duration-300  group-hover:bottom-5 group-hover:visible  left-0">
+              <button className="flex items-center bg-yellow-300 px-9 py-2 mx-auto">
+                <ShoppingBagIcon className="h-6 w-6 mr-2" />
+                <span className="break-normal">Add to Cart</span>
+              </button>
+            </div>
+            <div className="site-icons flex flex-col absolute top-1/3 -right-10 invisible group-hover:visible group-hover:right-5 transition-all duration-300 ease-in-out">
+              <button className="bg-gray-200 p-1 rounded mb-2">
+                <ArrowsPointingOutIcon className="h-6 w-6" />
+              </button>
+              <button className="bg-gray-200 p-1 rounded mb-2">
+                <HeartIcon className="h-6 w-6" />
+              </button>
+              <button className="bg-gray-200 p-1 rounded mb-2">
+                <ArrowPathIcon className="h-6 w-6" />
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </>

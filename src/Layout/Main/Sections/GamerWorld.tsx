@@ -20,7 +20,12 @@ const GamerWorld = () => {
             </Link>
           </div>
         </div>
-        <Card />
+        <div className="grid grid-cols-4 gap-4">
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+        </div>
       </div>
     </div>
   );
