@@ -1,6 +1,4 @@
 import React from "react";
-import { ArrowRightIcon } from "@heroicons/react/20/solid";
-import { Link } from "react-router-dom";
 import product1 from "../../../Images/product-img-4.jpg";
 import product2 from "../../../Images/product-img-5.jpg";
 import product3 from "../../../Images/product-img-6.jpg";
@@ -11,19 +9,13 @@ import {
   HeartIcon,
   ArrowsPointingOutIcon,
 } from "@heroicons/react/24/outline";
+import SectionHeading from "../../../Components/SectionHeading";
 
 const SellingProduct = () => {
   return (
     <section className="mt-12">
       <div className="container-x mx-auto">
-        <div className="selling flex justify-between">
-          <h2 className="text-2xl font-bold">Top Selling Products</h2>
-          <Link to="/">
-            <span className="flex font-bold">
-              ViewMore <ArrowRightIcon className="h-6 w-6" />
-            </span>
-          </Link>
-        </div>
+        <SectionHeading title="Top Selling Products" />
         <div className="grid gap-8 grid-cols-6">
           <div className="selling-card bg-white col-span-3 mt-5 rounded-sm group">
             <div className="selling-content flex mx-auto p-4 relative overflow-hidden">
