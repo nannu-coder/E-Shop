@@ -12,7 +12,7 @@ import SectionHeading from "../../../Components/SectionHeading";
 
 const BestSeller = () => {
   return (
-    <section className="mt-8">
+    <section className="mt-14">
       <div className="container-x mx-auto">
         <SectionHeading title="Best Seller" />
         <div className="grid grid-cols-6">

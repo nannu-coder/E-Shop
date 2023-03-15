@@ -27,6 +27,11 @@ module.exports = {
       },
     },
   },
-  plugins: [require("flowbite/plugin"), require("@tailwindcss/aspect-ratio")],
+  plugins: [
+    require("flowbite/plugin"),
+    require("@tailwindcss/aspect-ratio"),
+    require("@tailwindcss/line-clamp"),
+    require("@tailwindcss/forms"),
+  ],
   include: ["src/**/*.ts*"],
 };

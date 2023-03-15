@@ -1,23 +1,27 @@
 import React from "react";
 import Card from "../../../Components/Card";
 import SectionHeading from "../../../Components/SectionHeading";
-import add from "../../../Images/seller/ads-3.png";
+import ads from "../../../Images/ads-4.png";
 import { Link } from "react-router-dom";
 
-const PopularSell = () => {
+const NewArrival = () => {
   return (
-    <section className="mt-14">
+    <section className="mt-16">
       <div className="container-x mx-auto">
-        <SectionHeading title="Popular Sell" />
-        <div className="grid gap-4 grid-cols-4">
+        <SectionHeading title="New Arrival" />
+        <div className="grid grid-cols-4 gap-4">
+          <Card />
+          <Card />
+          <Card />
+          <Card />
           <Card />
           <Card />
           <Card />
           <Card />
         </div>
-        <div className="adds mt-3">
+        <div className="ads mt-8">
           <Link to="/">
-            <img className="w-full" src={add} alt="add" />
+            <img className="w-full" src={ads} alt="adds" />
           </Link>
         </div>
       </div>
@@ -25,4 +29,4 @@ const PopularSell = () => {
   );
 };
 
-export default PopularSell;
+export default NewArrival;

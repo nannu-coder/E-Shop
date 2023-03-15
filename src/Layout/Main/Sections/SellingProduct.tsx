@@ -13,7 +13,7 @@ import SectionHeading from "../../../Components/SectionHeading";
 
 const SellingProduct = () => {
   return (
-    <section className="mt-12">
+    <section className="mt-14">
       <div className="container-x mx-auto">
         <SectionHeading title="Top Selling Products" />
         <div className="grid gap-8 grid-cols-6">

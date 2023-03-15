@@ -4,8 +4,11 @@ import Banner from "../Layout/Main/Sections/Banner";
 import BestSeller from "../Layout/Main/Sections/BestSeller";
 import BrandShop from "../Layout/Main/Sections/BrandShop";
 import GamerWorld from "../Layout/Main/Sections/GamerWorld";
+import NewArrival from "../Layout/Main/Sections/NewArrival";
+import PopularSales from "../Layout/Main/Sections/PopularSales";
 import PopularSell from "../Layout/Main/Sections/PopularSell";
 import SellingProduct from "../Layout/Main/Sections/SellingProduct";
+import Subscription from "../Layout/Main/Sections/Subscription";
 import TimerApp from "../Layout/Main/Sections/TimerApp";
 
 const Home = () => {
@@ -19,6 +22,9 @@ const Home = () => {
       <SellingProduct />
       <BestSeller />
       <PopularSell />
+      <NewArrival />
+      <PopularSales />
+      <Subscription />
     </>
   );
 };

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const GamerWorld = () => {
   return (
-    <div className="bg-gray-50 pt-8">
+    <div className="bg-gray-50 pt-14">
       <div className="container-x mx-auto">
         <div className="section-heading flex items-center justify-between pb-5">
           <div className="section-text">

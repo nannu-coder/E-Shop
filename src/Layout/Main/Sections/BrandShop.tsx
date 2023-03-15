@@ -14,7 +14,7 @@ import brand12 from "../../../Images/Brand/brand-12.png";
 
 const BrandShop = () => {
   return (
-    <div className="brand-section mt-6">
+    <div className="brand-section mt-10">
       <div className="container-x mx-auto">
         <div className="brand-heading mb-4">
           <h2 className="text-3xl font-bold">Shop by Brand</h2>
