@@ -31,13 +31,13 @@ const SellingProduct = () => {
                   <StarIcon className="h-6 w-6 text-yellow-300" />
                 </div>
                 <h6 className="leading-6 font-normal mt-3">
-                  Senmei ipsum dolore eiusmod dolor officia do nisi
+                  Senmei ipsum dolore eiusmod dolor officia do nisii
                 </h6>
                 <div className="price flex mt-3">
                   <h3 className="font-bold text-gray-400 line-through">
                     $20.64
                   </h3>
-                  <h3 className="ml-4 font-bold text-red-600">$27.61</h3>
+                  <h3 className="ml-4 font-bold text-red-600">$27.62</h3>
                 </div>
                 <div className="card-btn">
                   <button className="cursor-pointer px-8 py-2 rounded-md mt-7 bg-yellow-400  text-white">
@@ -162,7 +162,7 @@ const SellingProduct = () => {
                   <h3 className="font-bold text-gray-400 line-through">
                     $20.64
                   </h3>
-                  <h3 className="ml-4 font-bold text-red-600">$27.61</h3>
+                  <h3 className="ml-4 font-bold text-red-600">$27.62</h3>
                 </div>
                 <div className="card-btn">
                   <button className="cursor-pointer px-8 py-2 rounded-md mt-7 bg-yellow-400  text-white">
