@@ -371,7 +371,7 @@ const HeaderNav: React.FC = () => {
 
                 {/* ============================== All Categories========================== */}
 
-                <Popover className="relative">
+                <Popover className="relative hidden md:block">
                   <Popover.Button className="inline-flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 bg-slate-100 px-14 py-4 rounded-tl-md rounded-tr-md focus-visible:outline-none">
                     <span>
                       <Bars3BottomLeftIcon className="h-6 w-6" />

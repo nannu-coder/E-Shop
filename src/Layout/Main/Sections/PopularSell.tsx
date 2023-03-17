@@ -9,7 +9,7 @@ const PopularSell = () => {
     <section className="mt-14">
       <div className="container-x mx-auto">
         <SectionHeading title="Popular Sell" />
-        <div className="grid gap-4 grid-cols-4">
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
           <Card />
           <Card />
           <Card />

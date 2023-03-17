@@ -18,15 +18,15 @@ const Footer = () => {
           </div>
           <hr />
           <div className="footer-content mt-5 mb-3">
-            <div className="grid grid-cols-6 gap-4">
-              <div className="about col-span-2">
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 lg:justify-start md:justify-between gap-4">
+              <div className="about md:col-span-2 lg:col-span-2">
                 <h2 className="text-black font-bold text-lg">About Us</h2>
                 <p className="text-lg text-gray-400 mt-4">
                   We know there are a lot of threa developers our but we pride
                   into a firm in the industry.
                 </p>
               </div>
-              <div className="feature col-span-2 text-gray-400">
+              <div className="feature md:col-span-2 lg:col-span-2 text-gray-400">
                 <h2 className="text-black font-bold text-lg">Feature</h2>
                 <ul>
                   <li className="mt-3">
@@ -40,7 +40,7 @@ const Footer = () => {
                   </li>
                 </ul>
               </div>
-              <div className="general-links text-gray-400">
+              <div className="general-links md:col-span-2 lg:col-span-1 text-gray-400">
                 <h2 className="text-black font-bold text-lg">General Links</h2>
                 <ul>
                   <li className="mt-3">
@@ -54,7 +54,7 @@ const Footer = () => {
                   </li>
                 </ul>
               </div>
-              <div className="helpful text-gray-400">
+              <div className="helpful md:col-span-2 lg:col-span-1 text-gray-400">
                 <h2 className="text-black font-bold text-lg">Helpful</h2>
                 <ul>
                   <li className="mt-3">
@@ -71,7 +71,7 @@ const Footer = () => {
             </div>
           </div>
           <hr className="pt-2" />
-          <div className="footer-bottom flex justify-between items-center py-4">
+          <div className="footer-bottom flex md:flex-row flex-col justify-between items-center py-4">
             <div className="bottom-content flex items-center">
               <Link to="/">
                 <FiInstagram className="h-6 w-6 mr-3" />
@@ -86,7 +86,7 @@ const Footer = () => {
                 &copy; {date.getFullYear()} E-Shop All rights reserved
               </p>
             </div>
-            <div className="botom-img">
+            <div className="botom-img mt-4 md:mt-0">
               <img src={paymentGetway} alt="Payment Getway" />
             </div>
           </div>

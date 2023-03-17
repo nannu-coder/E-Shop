@@ -12,7 +12,7 @@ const TimerApp = () => {
     <section>
       <div className="timer-app mt-10">
         <div className="container-x mx-auto">
-          <div className="grid grid-cols-6 gap-8">
+          <div className="grid lg:grid-cols-6 gap-8">
             <div className="timer-part col-span-3 lg:h-[460px] w-full">
               <Link to="/">
                 <div
@@ -52,7 +52,7 @@ const TimerApp = () => {
                     className="ml-16 block mt-5 text-base font-bold "
                     to="/"
                   >
-                    <span className="flex items-center decoration-gray-900 decoration-solid underline">
+                    <span className="flex items-center pb-4 decoration-gray-900 decoration-solid underline">
                       Shop Now
                       <ChevronRightIcon className="h-5 w-5" />
                     </span>

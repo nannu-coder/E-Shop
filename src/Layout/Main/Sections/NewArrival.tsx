@@ -9,7 +9,7 @@ const NewArrival = () => {
     <section className="mt-16">
       <div className="container-x mx-auto">
         <SectionHeading title="New Arrival" />
-        <div className="grid grid-cols-4 gap-4">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
           <Card />
           <Card />
           <Card />

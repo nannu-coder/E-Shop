@@ -11,7 +11,7 @@ const SmallFeature = () => {
     <div className="bg-gray-50 pt-8">
       <div className="container-x mx-auto">
         <div className="card bg-white py-5 rounded-md">
-          <div className="grid grid-cols-4">
+          <div className="grid gap-2 lg:grid-cols-4">
             <div className="shipping flex items-center justify-evenly">
               <div className="icon">
                 <ShoppingCartIcon className="h-10 w-10 text-red-400" />

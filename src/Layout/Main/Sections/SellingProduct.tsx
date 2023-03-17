@@ -16,8 +16,8 @@ const SellingProduct = () => {
     <section className="mt-14">
       <div className="container-x mx-auto">
         <SectionHeading title="Top Selling Products" />
-        <div className="grid gap-8 grid-cols-6">
-          <div className="selling-card bg-white col-span-3 mt-5 rounded-sm group">
+        <div className="grid gap-8 md:grid-cols-4 lg:grid-cols-6">
+          <div className="selling-card md:col-span-2 bg-white lg:col-span-3 mt-5 rounded-sm group">
             <div className="selling-content flex mx-auto p-4 relative overflow-hidden">
               <div className="img-part w-1/2">
                 <img className="mx-auto" src={product1} alt="Product1" />
@@ -58,7 +58,7 @@ const SellingProduct = () => {
               </div>
             </div>
           </div>
-          <div className="selling-card bg-white col-span-3 mt-5 rounded-sm group">
+          <div className="selling-card md:col-span-2 bg-white lg:col-span-3 mt-5 rounded-sm group">
             <div className="selling-content flex mx-auto p-4 relative overflow-hidden">
               <div className="img-part w-1/2">
                 <img className="mx-auto" src={product2} alt="Product1" />
@@ -100,7 +100,7 @@ const SellingProduct = () => {
             </div>
           </div>
 
-          <div className="selling-card bg-white col-span-3 rounded-sm group">
+          <div className="selling-card md:col-span-2 bg-white lg:col-span-3 rounded-sm group">
             <div className="selling-content flex mx-auto p-4 relative overflow-hidden">
               <div className="img-part w-1/2">
                 <img className="mx-auto" src={product3} alt="Product1" />
@@ -142,7 +142,7 @@ const SellingProduct = () => {
             </div>
           </div>
 
-          <div className="selling-card bg-white col-span-3 rounded-sm group">
+          <div className="selling-card md:col-span-2 bg-white lg:col-span-3 rounded-sm group">
             <div className="selling-content flex mx-auto p-4 relative overflow-hidden">
               <div className="img-part w-1/2">
                 <img className="mx-auto" src={product4} alt="Product1" />
