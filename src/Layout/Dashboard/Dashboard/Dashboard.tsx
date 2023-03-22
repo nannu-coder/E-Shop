@@ -17,10 +17,7 @@ const Dashboard = () => {
               <li>List6</li>
               <li>List7</li>
               <li>List8</li>
-              <li>This complex layout</li>
-              <li>Thats great Layout</li>
-              <li>Lets See what actually happend</li>
-              <li>Lets See</li>
+             
             </ul>
           </div>
           <div className="content">
