@@ -1,6 +1,7 @@
 import React, { useState, Fragment } from "react";
 import { Listbox, Transition } from "@headlessui/react";
 import { CheckIcon, ChevronDownIcon } from "@heroicons/react/20/solid";
+import { Link } from "react-router-dom";
 
 const countries = [
   {
@@ -66,7 +67,9 @@ const HeaderTop = () => {
       <div className="container-x mx-auto">
         <div className="header-box hidden md:flex justify-between py-0 items-center">
           <div className="header-left">
-            <button className="btn mr-3">Account</button>
+            <Link to="/dashboard/" className="btn mr-3">
+              Dashboard
+            </Link>
             <button className="btn mr-3">Track Order</button>
             <button className="btn mr-3">Support</button>
           </div>
