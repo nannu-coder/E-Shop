@@ -4,6 +4,8 @@ import Header from "../../Components/Header/Header";
 import Footer from "./Sections/Footer";
 
 const Main = () => {
+  // This is Whole Page Main
+
   return (
     <>
       <Header />

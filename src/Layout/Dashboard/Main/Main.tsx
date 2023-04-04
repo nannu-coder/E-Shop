@@ -1,6 +1,8 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 
+// This Is Dashboard Main
+
 const Main = () => {
   return (
     <div className="mx-6">
