@@ -9,9 +9,9 @@ const Main = () => {
       <div className="main-head bg-white shadow-lg max-w-full w-full py-4 px-5 rounded-lg">
         <div className="header-content flex justify-between">
           <div className="title">
-            <h2 className="">Dashboard</h2>
+            <h2 className="">Dashboard is here</h2>
           </div>
-          <div className="icons">logout</div>
+          <div className="icons">logout user</div>
         </div>
       </div>
       <div className="main-content">
