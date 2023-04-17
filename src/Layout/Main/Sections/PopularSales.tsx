@@ -14,7 +14,7 @@ const PopularSales = () => {
             </div>
             <div className="popular-text ml-3">
               <h3 className="line-clamp-1 font-semibold mb-2">
-                Xoggle aute et pariatur adipisicing nostrud et excepteur
+                Xoggle aute et pariatur adipisicing nostrud et excepteurs
               </h3>
               <div className="price flex">
                 <h2 className="font-bold line-through text-gray-400 text-xl">

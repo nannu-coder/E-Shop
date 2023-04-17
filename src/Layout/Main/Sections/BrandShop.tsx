@@ -17,7 +17,7 @@ const BrandShop = () => {
     <div className="brand-section mt-10">
       <div className="container-x mx-auto">
         <div className="brand-heading mb-4">
-          <h2 className="text-3xl font-bold">Shop by Brand</h2>
+          <h2 className="text-3xl font-bold">Shop by Brands</h2>
         </div>
 
         <div className="grid grid-cols-6">

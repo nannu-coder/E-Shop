@@ -31,7 +31,7 @@ const SellingProduct = () => {
                   <StarIcon className="h-6 w-6 text-yellow-300" />
                 </div>
                 <h6 className="leading-6 font-normal mt-3">
-                  Senmei ipsum dolore eiusmod dolor officia do nisii
+                  Senmei ipsum dolore eiusmod dolor officia do nisis
                 </h6>
                 <div className="price flex mt-3">
                   <h3 className="font-bold text-gray-400 line-through">
