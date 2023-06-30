@@ -5,8 +5,8 @@ const Error = () => {
     <div>
       <h2>404 NOT FOUND</h2>
       <h5>Make Sure You Are Right URL</h5>
-      <h1>Error Page</h1>
-      <h1>Go to Back</h1>
+      <h1>Error Pages</h1>
+      <h1>Go to Back to Home</h1>
     </div>
   );
 };
